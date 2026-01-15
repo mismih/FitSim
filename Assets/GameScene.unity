@@ -848,6 +848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603955963}
   - component: {fileID: 603955962}
+  - component: {fileID: 603955964}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -868,6 +869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CaloriesSystem
   caloriesText: {fileID: 587680872}
+  experienceSystem: {fileID: 603955964}
 --- !u!4 &603955963
 Transform:
   m_ObjectHideFlags: 0
@@ -883,6 +885,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603955964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603955961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ca257d2660440489a2d7b594b4db79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExperienceSystem
+  level2Exp: 100
+  level3Exp: 250
+  level4Exp: 500
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,16 +2024,24 @@ PrefabInstance:
       value: SpongeBob
       objectReference: {fileID: 0}
     - target: {fileID: 6796235038457139318, guid: fda28dd0cdecfa648a94a88973c56ec8, type: 3}
+      propertyPath: m_Size.x
+      value: 2.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796235038457139318, guid: fda28dd0cdecfa648a94a88973c56ec8, type: 3}
+      propertyPath: m_Size.y
+      value: 2.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796235038457139318, guid: fda28dd0cdecfa648a94a88973c56ec8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1326842880746181775, guid: 35d7801c17ca45a4fa6039587c9c2b47, type: 3}
     - target: {fileID: 6796235038457139318, guid: fda28dd0cdecfa648a94a88973c56ec8, type: 3}
       propertyPath: m_SortingOrder
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6796235038457139318, guid: fda28dd0cdecfa648a94a88973c56ec8, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2058,6 +2083,7 @@ MonoBehaviour:
     sprite: {fileID: -7910095488935836769, guid: 77d6814c5e58eb544926ed5149004096, type: 3}
   - level: 4
     sprite: {fileID: 348563137313847524, guid: af8366f785ca01240951b9a0a1e2f31d, type: 3}
+  experienceSystem: {fileID: 603955964}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

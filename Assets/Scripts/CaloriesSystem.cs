@@ -4,22 +4,29 @@ using UnityEngine.UI;
 public class CaloriesSystem : MonoBehaviour
 {
     [SerializeField] private Text caloriesText;
+    [SerializeField] private ExperienceSystem experienceSystem;
+
     private int calories;
 
     private void Start()
     {
-        RefreshUI();
+        UpdateText();
     }
 
     public void AddCalories(int amount)
     {
         calories += amount;
-        RefreshUI();
+        UpdateText();
+
+        if (experienceSystem != null)
+        {
+            experienceSystem.AddExp(amount);
+        }
     }
 
-    private void RefreshUI()
+    private void UpdateText()
     {
         if (caloriesText != null)
-            caloriesText.text = "Calories : " + calories;
+            caloriesText.text = "Calories: " + calories;
     }
 }
