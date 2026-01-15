@@ -11,16 +11,31 @@ public class PlayerSkin : MonoBehaviour
 
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private LevelSkin[] skins;
+    [SerializeField] private ExperienceSystem experienceSystem;
 
-    private void Reset ()
+    private void Awake()
     {
-        sr = GetComponent<SpriteRenderer>();
+        if (sr == null)
+            sr = GetComponent<SpriteRenderer>();
     }
 
-    public void  ApplyLevel(int currentLevel)
+    private void Start()
     {
-        if (sr == null) sr = GetComponent<SpriteRenderer>();
+        if (experienceSystem != null)
+        {
+            experienceSystem.OnLevelChanged += ApplyLevel;
+            ApplyLevel(experienceSystem.CurrentLevel);
+        }
+    }
 
+    private void OnDestroy()
+    {
+        if (experienceSystem != null)
+            experienceSystem.OnLevelChanged -= ApplyLevel;
+    }
+
+    public void ApplyLevel(int currentLevel)
+    {
         Sprite best = sr.sprite;
         int bestLevel = int.MinValue;
 
@@ -35,13 +50,6 @@ public class PlayerSkin : MonoBehaviour
         }
 
         sr.sprite = best;
+        Debug.Log("Skin applied for level " + currentLevel);
     }
-
-    void Start ()
-    {
-        Debug.Log("PlayerSkin Start on: " + gameObject.name);
-        ApplyLevel(1);
-        Debug.Log("Applied sprite: " + sr.sprite.name);
-    }
-
 }
