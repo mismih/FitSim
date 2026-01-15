@@ -13,6 +13,6 @@ public class AxelKretanje : MonoBehaviour
       float x_osa = Input.GetAxis("Horizontal");
       float y_osa = Input.GetAxis("Vertical");
 
-      rb.velocity = new Vector2(x_osa, y_osa) * brzinaKretanja;  
+      rb.linearVelocity = new Vector2(x_osa, y_osa) * brzinaKretanja;  
     }
 }
