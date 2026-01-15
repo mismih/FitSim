@@ -40,7 +40,7 @@ public class PlayerSkin : MonoBehaviour
     void Start ()
     {
         Debug.Log("PlayerSkin Start on: " + gameObject.name);
-        ApplyLevel(2);
+        ApplyLevel(1);
         Debug.Log("Applied sprite: " + sr.sprite.name);
     }
 
