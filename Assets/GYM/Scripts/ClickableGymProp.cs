@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ClickableProp : MonoBehaviour
+public class ClickableGymProp : MonoBehaviour
 {
     [SerializeField] private int caloriesOnClick = 10;
 
