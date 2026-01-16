@@ -18,12 +18,21 @@ public class CaloriesSystem : MonoBehaviour
         calories += amount;
         UpdateText();
 
+    }
+    public void RemoveCalories(int amount)
+    {   
+        if (calories > 0)
+        {
+            calories -= amount;
+            UpdateText();
+        }
+       
+
         if (experienceSystem != null)
         {
             experienceSystem.AddExp(amount);
         }
     }
-
     private void UpdateText()
     {
         if (caloriesText != null)

@@ -13,10 +13,15 @@ public class ClickManager2D : MonoBehaviour
 
             if (hit.collider != null)
             {
-                ClickableProp prop = hit.collider.GetComponent<ClickableProp>();
+                ClickableGymProp prop = hit.collider.GetComponent<ClickableGymProp>();
                 if (prop != null)
                 {
-                    caloriesSystem.AddCalories(prop.CaloriesOnClick);
+                    caloriesSystem.RemoveCalories(prop.CaloriesOnClick);
+                }
+                ClickableFoodProp foodProp = hit.collider.GetComponent<ClickableFoodProp>();
+                if (foodProp != null)
+                {
+                    caloriesSystem.AddCalories(foodProp.CaloriesOnClick);
                 }
             }
         }
