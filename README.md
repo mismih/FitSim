@@ -1,66 +1,26 @@
-FitSim
-Solution Name
+# FitSim
 
-FitSim
+FitSim is a personal game project made for Hack Club Ship.
 
-Team Name
+## About the project
+FitSim is a simple fitness simulation game focused on balancing training and nutrition.
+The player manages workouts in the gym and meals in the kitchen to maintain good overall fitness.
 
-XxxJaksaBulatovicxxX
+## Features
+- Gym system with multiple exercises
+- Kitchen system with different meals
+- Simple balance mechanics between food and training
+- Main menu with scene navigation
 
-Team Members & Roles
+## Built with
+- Unity
+- C#
+- Built from scratch by me
 
-Mihajlo – Team Captain, Lead Game Developer, Project Lead
+## How to run
+1. Open the project in Unity
+2. Open the Main Menu scene
+3. Press Play
 
-Mihajlo – Game Developer, Game Designer
-
-Vasilije – Game Design Assistant, Creative Contributor
-
-Filip – Team Support, Motivation & Morale
-
-Project Description
-
-FitSim is an interactive simulation game focused on balancing training and nutrition.
-The character in the game represents the player and their ability to consistently manage workouts and food intake.
-
-The game consists of three scenes:
-
-Main Menu
-
-Kitchen
-
-Gym
-
-In the gym, the player can choose between three exercises, which are enough to train the whole body.
-In the kitchen, the player can choose between four different meals, which must be balanced carefully.
-
-Throughout the gameplay, the player is followed by:
-
-their character
-
-total calories consumed
-
-total calories burned
-
-The goal of the simulation is to maintain a healthy balance between training and nutrition.
-
-Technologies Used
-
-GitHub
-
-Git
-
-Visual Studio
-
-Visual Studio Code
-
-C#
-
-Adobe Photoshop
-
-Adobe After Effects
-
-FL Studio
-
-Discord
-
-ChatGPT
+## Why I made this
+I made this project to practice game development, scene management, and basic gameplay systems in Unity.
