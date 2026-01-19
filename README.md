@@ -1,3 +1,8 @@
+# HOW TO PLAY
+- click play to enter the game (obv)
+- click on the game props multiple times to make ur character stronger
+- in the kitchen click on the food to gain calories
+
 # FitSim
 
 FitSim is a personal game project made for Hack Club Ship.
@@ -16,11 +21,6 @@ The player manages workouts in the gym and meals in the kitchen to maintain good
 - Unity
 - C#
 - Built from scratch by me
-
-## How to run
-1. Open the project in Unity
-2. Open the Main Menu scene
-3. Press Play
 
 ## Why I made this
 I made this project to practice game development, scene management, and basic gameplay systems in Unity.
